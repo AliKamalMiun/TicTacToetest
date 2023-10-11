@@ -1,0 +1,22 @@
+<UserControl x:Class="TicTacToe.Views.StartView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:TicTacToe.ViewModels"
+             xmlns:converters="clr-namespace:TicTacToe.Converters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+
+    <UserControl.Resources>
+        <converters:IntToBoolConverter x:Key="IntToBoolConverter"/>
+    </UserControl.Resources>
+
+
+
+    <Grid>
+        <StackPanel>
+            <Button Command="{Binding StartGameCommand}" CommandParameter="3" Content="Spela 3 i rad"/>
+            <Button Command="{Binding StartGameCommand}" CommandParameter="5" Content="Spela 5 i rad"/>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
